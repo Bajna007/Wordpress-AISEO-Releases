@@ -1,0 +1,65 @@
+name: Sign AISEO release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Exact release version
+        required: true
+        type: string
+      channel:
+        description: Update channel
+        required: true
+        type: choice
+        options: [stable, beta, edge]
+      commit:
+        description: Exact 40-character private source commit
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  sign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Validate inputs and download candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+          COMMIT: ${{ inputs.commit }}
+        shell: bash
+        run: |
+          [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]] || exit 1
+          [[ "$COMMIT" =~ ^[a-f0-9]{40}$ ]] || exit 1
+          gh release download "v$VERSION" --pattern "wordpress-aiseo-$VERSION.zip"
+          test "$(unzip -p "wordpress-aiseo-$VERSION.zip" wordpress-aiseo/wordpress-aiseo.php | sed -n 's/^[[:space:]]*\*[[:space:]]*Version:[[:space:]]*//p' | tr -d '\r')" = "$VERSION"
+      - name: Sign manifest
+        env:
+          AISEO_RELEASE_PRIVATE_KEY: ${{ secrets.AISEO_RELEASE_PRIVATE_KEY }}
+          AISEO_TESTED_WORDPRESS: '7.0.4'
+        run: >-
+          node scripts/sign-manifest.mjs
+          --zip "wordpress-aiseo-${{ inputs.version }}.zip"
+          --output wordpress-aiseo-manifest.json
+          --version "${{ inputs.version }}"
+          --channel "${{ inputs.channel }}"
+          --commit "${{ inputs.commit }}"
+      - name: Publish signed manifest and channel
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh release upload "v${{ inputs.version }}" wordpress-aiseo-manifest.json --clobber
+          mkdir -p "${{ inputs.channel }}"
+          cp wordpress-aiseo-manifest.json "${{ inputs.channel }}/manifest.json"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add "${{ inputs.channel }}/manifest.json"
+          git commit -m "Publish AISEO ${{ inputs.version }} (${{ inputs.channel }})"
+          git push
