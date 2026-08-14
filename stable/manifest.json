@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0.0",
   "plugin": "wordpress-aiseo",
-  "version": "0.3.2",
+  "version": "0.5.3",
   "channel": "stable",
   "requires_wordpress": "6.2",
   "requires_php": "7.4",
   "tested_wordpress": "7.0.4",
-  "changelog": "AISEO 0.3.2: same-host Codex OAuth, local SEO engine and portable signed updates.",
+  "changelog": "AISEO 0.5.3",
   "asset": {
-    "name": "wordpress-aiseo-0.3.2.zip",
-    "size": 180065,
-    "sha256": "62e280bd943805ff1beff0893938315b065c0a779b636d10e92f91b6d91810de"
+    "name": "wordpress-aiseo-0.5.3.zip",
+    "size": 235499,
+    "sha256": "efcde7213b4d12a46f83dc7e94e7424af22230d542c8049f0a0610e16ed7d3f7"
   },
-  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.3.2/wordpress-aiseo-0.3.2.zip",
-  "release_commit": "ee3099c77aa7682dea9f4a55c32dddf4cea29363",
-  "published_at": "2026-08-13T21:09:07.743Z",
-  "signature": "yD0E9QFxBRBQifasTYrXKwk/G983oqlqUkrWp8Yc9FqZY1d4o31LwZIkJvNPMRsEW5P0xXdJGwfGUvC0Sn3EBQ=="
+  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.5.3/wordpress-aiseo-0.5.3.zip",
+  "release_commit": "c78d64fdcb352be63e206ccc092ebfc5b70e4094",
+  "published_at": "2026-08-14T10:40:51.782Z",
+  "signature": "pcX74nWa/5VO6oy0GssMZ+Zzty73I2ihvCYtGHq+v8bVttwfKqyq2zqGdn/+unVDkF1aPKEVlsGnGRImjFxkBQ=="
 }
