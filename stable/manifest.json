@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0.0",
   "plugin": "wordpress-aiseo",
-  "version": "0.7.21",
+  "version": "0.7.22",
   "channel": "stable",
   "requires_wordpress": "6.2",
   "requires_php": "7.4",
   "tested_wordpress": "7.0.4",
-  "changelog": "AISEO 0.7.21",
+  "changelog": "AISEO 0.7.22",
   "asset": {
-    "name": "wordpress-aiseo-0.7.21.zip",
-    "size": 367155,
-    "sha256": "110d99299261dd8e6eca8ff33c5243a0f8a5ca12a5c0bdda8d72a77965f8fc1f"
+    "name": "wordpress-aiseo-0.7.22.zip",
+    "size": 376050,
+    "sha256": "31339a74b0bb58683a8b9047384955d92636d3da9e1fe86b248dcf1d3cba8130"
   },
-  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.7.21/wordpress-aiseo-0.7.21.zip",
-  "release_commit": "8e14a9641d4f28ff15ea9f7ee41526f0b4420cd1",
-  "published_at": "2026-08-15T14:27:22.575Z",
-  "signature": "Ahr1SPOdeqM7Dm4YqnVki7WtcPsTombCiziYg4iA7hoeE6Q+BxZPSr5gF0QQgQX/m8d4QozcQLw+tD8xp+DzAw=="
+  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.7.22/wordpress-aiseo-0.7.22.zip",
+  "release_commit": "29a9c85117c9a58e72c33492a72214fd76ee9157",
+  "published_at": "2026-08-15T16:40:44.118Z",
+  "signature": "mBO7kcP4ZWPICBYsQb/VCK1AAHbd5Uwr7VcIpNu1wqXnG5fS75cgo08AQoYGpy08jDUzNMwA7d8utNWjbmNbAA=="
 }
