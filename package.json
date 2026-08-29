@@ -1,0 +1,12 @@
+{
+  "name": "wordpress-aiseo-releases",
+  "version": "0.0.0-private",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "verify:stable": "node scripts/verify-manifest.mjs --manifest stable/manifest.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "algorithm": "Ed25519",
+  "key_id": "sha256:3cd196c7a9c1fd31e9be6675927542f33ce0009d531abe05f84a9bca7c803692",
+  "public_key_base64": "paEOEpXYe833YJEbkfj/1Ffe89XwdXYVgHtNJl9kjCM=",
+  "provenance": {
+    "source_repository": "Bajna007/Wordpress-AISEO",
+    "source_path": "src/Updater/Updater.php",
+    "source_constant": "RELEASE_PUBLIC_KEYS",
+    "publisher_slot": 2,
+    "verified_against": "stable/manifest.json"
+  }
+}
