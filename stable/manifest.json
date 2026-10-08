@@ -1,21 +1,21 @@
 {
   "schema_version": "1.0.0",
   "plugin": "wordpress-aiseo",
-  "version": "0.8.14",
+  "version": "0.8.16",
   "channel": "stable",
   "requires_wordpress": "6.2",
   "requires_php": "7.4",
-  "tested_wordpress": "7.0.4",
-  "changelog": "AISEO 0.8.14",
+  "tested_wordpress": "7.1.3",
+  "changelog": "AISEO 0.8.16",
   "asset": {
-    "name": "wordpress-aiseo-0.8.14.zip",
-    "size": 500029,
-    "sha256": "dbd52cfbc082abd88e9b25496f8db4a16299a6ff63d8b7907ce9f1c5d81d440b"
+    "name": "wordpress-aiseo-0.8.16.zip",
+    "size": 506815,
+    "sha256": "9aa5e67461141f792f514faacf33dac4ddb0225717d46bc881848a98c9d5ede4"
   },
-  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.8.14/wordpress-aiseo-0.8.14.zip",
-  "release_commit": "4d360cdfcc5b7b2eed8ff1164b5e06404f5ff283",
-  "published_at": "2026-10-06T11:05:04.083Z",
-  "expires_at": "2026-11-05T11:05:04.083Z",
-  "release_sequence": 1791284704,
-  "signature": "pw0KqChazvaKCV4PrlxG19iHz81JcpucUgH3HZhUjMsRSN7Rv8UdxDM/KE/rzBjXs4FTAOscre81gOMhYWXmCQ=="
+  "package_url": "https://github.com/Bajna007/Wordpress-AISEO-Releases/releases/download/v0.8.16/wordpress-aiseo-0.8.16.zip",
+  "release_commit": "ca99450cb687bc67df67e0e36c84c75a2e876f33",
+  "published_at": "2026-10-08T10:18:03.502Z",
+  "expires_at": "2026-11-07T10:18:03.502Z",
+  "release_sequence": 1791454683,
+  "signature": "sGH8LBldEIYU9ZufUODNmQ1E7Bv6kciilb9X2H1y0Jenzyk1NBUhoin5U7uoZkjvJlHnRIGnsrKJ6fQ3qkNZBA=="
 }
